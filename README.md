@@ -33,19 +33,15 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 1. Python 3 or later
-2. Python following libraries tensorflow opencv-contrib-python h5py numpy scipy pillow matplotlib keras
-3. GPU runtime is recommend
+2. Node.JS
+3. Libraries Flask, python-dotenv
 
-
-## 🎈 Usage <a name="usage"></a>
-
-Using following command "python app.py" or run all for Jupiter Notebook or Google Colaboratory
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Web Framework
-- [Kaggle's datasets](https://www.kaggle.com/datasets) - Datasets
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) - Web Framework and API
+- [ReactJS](https://reactjs.org) - Frontend
 
 
 ## ✍️ Authors <a name = "authors"></a>
