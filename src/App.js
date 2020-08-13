@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [currentTime, setCurrentTime] = useState(0)
+  const [currentDate, setCurrentDate] = useState(null)
+  useEffect(() => {
+    fetch('/time').then(res => res.json()).then(data => {
+      setCurrentTime(data.time);
+    })
+    fetch('/date').then(res => res.json()).then(data => {
+      setCurrentDate(data.date)
+    })
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -10,14 +20,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>The current time is {currentTime}.</p>
+        <p>Today is {currentDate}</p>
       </header>
     </div>
   );
